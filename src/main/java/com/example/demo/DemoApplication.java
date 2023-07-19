@@ -29,12 +29,6 @@ public class DemoApplication implements EmployeeRepository {
 		return LoadData.employeeList;
 	}
 
-	@GetMapping("/hello")
-	public String hello(@RequestParam(value = "name", defaultValue = "World") String name) {
-		loadData.initDatabase(this);
-		return String.format("Hello %s!", name);
-	}
-
 	@GetMapping("/hello/employees")
 	public List<Employee> employees(@RequestParam(value = "name", defaultValue = "World") String name) {
 		loadData.initDatabase(this);
