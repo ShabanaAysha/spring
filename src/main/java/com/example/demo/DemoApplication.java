@@ -41,7 +41,6 @@ public class DemoApplication implements EmployeeRepository {
 		return loadData.all();
 	}
 
-
 	@PostMapping("/hello/employees/add")
 	public void addEmployeeInList(@RequestBody Employee employee) {
 		loadData.initDatabase(this);
